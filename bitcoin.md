@@ -1,8 +1,11 @@
 # Bitcoin
 
-trusted-third-party model is inadequate
+## Precis
 
+trusted-third-party model is inadequate
 how do we achieve a trustless model?
+
+This is the seminal blockchain paper, can't say much more than that.
 
 ## Transactions
 - a coin comes into existence (somehow) with an owner Alice
@@ -86,7 +89,7 @@ it's referred to by hash in a following block. The paper says it can
 request one - it isn't clear exactly who it requests it from. Some
 sort of gossip protocol?
 
-# Incentive
+## Incentive
 
 Every block+PoW creates a coin owned by the node that found the PoW.
 The paper makes the argument that a greedy attacker who owns > 50% of
@@ -96,12 +99,12 @@ bound on how much money a transaction can represent, this seems an
 extremely weak argument. Probably a one-shot thing, but it's not like
 that cpu power goes away.
 
-# disk space
+## disk space
 
 structuring the hash as a merkle tree means we don't need to retain
 the full blockchain, just as far back as we want to verify directly.
 
-# simplified payment verification
+## simplified payment verification
 
 a node that dips in and out of the network needs a different way of
 verifying a transaction. they can ask full nodes for their longest
@@ -109,7 +112,7 @@ chain until they're satisfied that their transaction is deeply-enough
 buried. Individuals can make their own convenience-safety tradeoff
 decisions.
 
-# combining and splitting value
+## combining and splitting value
 
 one transaction per coin is a bit dumb. instead, a transaction takes
 an arbitrary number of inputs, and up to two outputs: one to assign to
@@ -117,12 +120,12 @@ the recipient, and an optional one to return change to the sender.
 (This is a slightly weird one - not entirely clear to me what this
 buys over another transaction sending money back? Atomicity, maybe?)
 
-# Privacy
+## Privacy
 
 basically, don't let your identity get tied to the keypair. Not
 particularly strong protection. Think there's further work on this.
 
-# Calculations
+## Calculations
 
 Proofs! Looks right for the attack model they're chiefly concerned
 with - basic exponential argument.
