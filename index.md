@@ -6,3 +6,5 @@ Unlikely anybody but me will care, but I don't mind doing it in public.
 - [Bitcoin](bitcoin.md)
 - [Ethereum](ethereum.md)
 - [Pegged sidechains](pegged_sidechains.md)
+
+- [Papers i haven't read yet](TOREAD.md)
